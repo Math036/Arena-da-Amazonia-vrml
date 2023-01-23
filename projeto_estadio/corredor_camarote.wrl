@@ -1,0 +1,57 @@
+#VRML V2.0 utf8
+
+Group{
+  children[
+    Shape{
+      appearance DEF concreto Appearance{
+        material Material{
+          diffuseColor 0.6 0.6 0.6
+        }
+      }
+      geometry DEF hall Box{size 1.5 0.1 5}
+    }
+    Transform{
+      rotation 0 0 1 1.57
+      translation 0.7 0.7 0
+      children[
+        Shape{
+          appearance USE concreto
+          geometry USE hall
+        }
+      ]
+    }
+    Transform{
+      rotation 0 0 1 1.57
+      translation -0.7 0.7 0
+      children[
+        Shape{
+          appearance USE concreto
+          geometry USE hall
+        }
+      ]
+    }
+    Transform{
+      translation 0 1.5 0
+      children[
+        Shape{
+          appearance USE concreto
+          geometry USE hall
+        }
+      ]
+    }
+  ]
+}
+Transform{
+  translation 0 0.75 -2.5
+children[
+Shape{
+  appearance Appearance{
+    material Material{
+      diffuseColor 0 0 0
+    }
+  }
+  geometry Box{size 1.5 1.5 0.1}
+}
+
+]
+}

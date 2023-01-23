@@ -1,0 +1,182 @@
+#VRML V2.0 utf8
+
+#Muro frontal
+
+
+Group{
+  children[
+     Shape{
+      appearance DEF base_color Appearance {
+        material Material{
+          diffuseColor 0.6 0.6 0.6
+        }
+      }geometry DEF small_wall Box {
+        size 2 1.5 0.1
+      }}
+      Transform{
+        rotation 0 1 0 -0.25
+        translation 1 0 0
+        children[
+          Shape {
+            appearance USE base_color
+            geometry USE small_wall
+          }
+          Transform{
+            rotation 0 1 0 0.56
+            translation -2 0 0.54
+            children[
+              Shape{
+                appearance USE base_color
+                geometry USE small_wall
+              }]}]}]}
+
+#Muro de trás
+Group{
+  children[
+  Transform {
+  translation 0 0.5 -4
+  children[
+      Shape{
+      appearance USE base_color
+      geometry DEF big_wall Box{ size 2 2.5 0.1}}
+      Transform{
+        rotation 0 1 0 -0.25
+        translation 1.6 0 0.15
+        scale 0.7 1 1
+        children[
+          Shape{
+          appearance USE base_color
+          geometry USE big_wall}
+        Transform{
+           rotation 0 1 0 0.37
+           translation -4.57 0 0.87
+           children[
+            Shape{
+              appearance USE base_color
+              geometry USE big_wall
+            }]}]}]}]}
+
+#Paredes Laterais            
+Group{
+  children[
+    Transform{
+      rotation 0 1 0 -0.08
+      translation 2.1 0 -1.7
+      children[
+      Shape{
+        appearance USE base_color
+        geometry DEF side_wall Box{size 0.1 1.5 4}
+    }
+    Transform{
+      rotation 0 1 0 0.17
+      translation -4.3 0 0.4
+      children[
+        Shape{
+          appearance USE base_color
+          geometry USE side_wall
+        }
+        Transform{ 
+          rotation 1 0 0 0.25
+          translation 0 1.25 0
+          scale 1 0.05 1 
+           children[
+             Shape{
+              appearance USE base_color
+              geometry USE side_wall
+        }Transform{
+          rotation 0 1 0 -0.16
+          translation 4.3 1.5 0.3
+          children[
+            Shape{
+              appearance USE base_color
+              geometry USE side_wall
+        }
+          ]
+        }
+      ]
+    }
+      ]
+    }
+  ]}]
+}
+
+Transform{
+  rotation 0 1 0 -0.08
+  translation -0.1 -0.75 0.1
+  children[
+    Shape{
+      appearance USE base_color
+      geometry DEF side_triangle IndexedFaceSet{
+        solid FALSE 
+        coord Coordinate{
+          point[2.1 1.5 0, 2.1 1.5 -4, 2.1 2.5 -4]
+        }
+        coordIndex[
+          2 1 0 -1
+        ]
+      }
+    }
+    Transform{
+      rotation 0 1 0 0.17
+      translation -4.04 0 0.73
+      children[
+        Shape{
+        appearance USE base_color
+        geometry USE side_triangle
+        }]}]}
+  
+#Corredor Central
+Transform{
+  rotation 1 0 0 0.25
+  translation 0 1.25 -2
+  children[
+    Shape{
+      appearance USE base_color
+      geometry Box{ size 1.5 0.05 4}
+    }
+  ]
+}
+
+#Bancos
+Group{
+  children[
+    Transform{
+      translation -0.5 -0.8 0
+      children[
+        Shape{
+          appearance DEF cor_banco Appearance{
+            material Material{
+              diffuseColor 0.5 0 0
+            }	texture ImageTexture {
+			      url "texturas\arquibancada.jpg"
+			}
+          }
+          geometry DEF banco IndexedFaceSet{
+            solid FALSE
+            coord Coordinate{
+              point[1.2 1.5 0, 2.5 1.5 0.25, 1.2 2.5 -4, 2.7 2.5 -3.7]
+            }
+            coordIndex[ 2 1 0 -1,
+            3 2 1 -1]
+          }
+        }
+         Transform{
+          translation 1 0 0
+          children[
+            Shape{
+              appearance USE cor_banco 
+              geometry IndexedFaceSet{
+                solid FALSE
+                  coord Coordinate{
+                  point[-1.2 1.5 0, -2.5 1.5 0.25, -1.2 2.5 -4, -2.9, 2.5 -3.7]
+                  }
+                  coordIndex[ 2 1 0 -1,
+                  3 2 1 -1]
+              }
+            }
+          ]
+         }
+      ]
+    }
+  ]
+}

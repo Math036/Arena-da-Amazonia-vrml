@@ -1,0 +1,27 @@
+#VRML V2.0 utf8
+
+Group {
+children[
+Transform{
+  rotation 1 0 0 -0.35
+  children[
+    Shape{
+      appearance DEF banner_propaganda Appearance{
+        texture ImageTexture{
+          url "texturas/ronaldinho_soccer.jpg"
+        }
+      }geometry DEF banner Box{size 4 1 0.1}
+    }
+    Transform{
+      translation 0 0.1 -0.33
+      rotation 1 0 0 0.75
+      children[
+        Shape{
+          appearance USE banner_propaganda
+          geometry USE banner
+        }
+      ]
+    }
+  ]
+}
+]}
