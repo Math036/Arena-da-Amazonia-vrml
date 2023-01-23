@@ -461,3 +461,523 @@ Transform{
 		Inline{
 			url "escada_acesso.wrl"
 		}]}
+
+#Primeiro Corredor Externo
+		Transform{
+			translation 0 0.7 -5.5
+			scale 1.5 1 1
+			children[
+				Shape{
+					appearance DEF concreto Appearance{
+						material Material{
+							diffuseColor 0.6 0.6 0.6
+						}
+					}
+					geometry DEF bloco_concreto Box{size 6 1.5 1}
+				}
+			]
+		}
+
+		Transform{
+			translation 0 0.7 5.5
+			scale 1.5 1 1
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}]}
+
+#Diagonais
+			Transform{
+			rotation 0 1 0 0.32
+			translation 5.2 0.7 5.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.32
+			translation -5.2 0.7 5.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 0.32
+			translation -5.2 0.7 -5.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 -0.32
+			translation 5.2 0.7 -5.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Diagonais parte 2
+			Transform{
+			rotation 0 1 0 0.82
+			translation 7 0.7 4.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation -7 0.7 4.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation 7 0.7 -4.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 0.82
+			translation -7 0.7 -4.3
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+#Diagonais Parte 3
+			Transform{
+			rotation 0 1 0 1.04
+			translation 8.4 0.7 2.5
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.04
+			translation -8.4 0.7 2.5
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.04
+			translation -8.4 0.7 -2.5
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.04
+			translation 8.4 0.7 -2.5
+			scale 0.4 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+#Partes Finais
+			Transform{
+			rotation 0 1 0 1.57
+			translation 9 0.7 0
+			scale 0.6 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.57
+			translation -9 0.7 0
+			scale 0.6 1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Fazendo dois andares de parede de uma vez
+#Laterais
+		Transform{
+			translation 0 1.5 6
+			scale 1.5 2 1
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}]}
+		Transform{
+			translation 0 1.5 -6
+			scale 1.5 2 1
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}]}
+
+#Diagonais 1
+			Transform{
+			rotation 0 1 0 0.32
+			translation 5.2 1.5 5.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.32
+			translation -5.2 1.5 5.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 0.32
+			translation -5.2 1.5 -5.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 -0.32
+			translation 5.2 1.5 -5.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+#Diagonais 2
+			Transform{
+			rotation 0 1 0 0.82
+			translation 7 1.5 4.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation -7 1.5 4.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation 7 1.5 -4.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 0.82
+			translation -7 1.5 -4.7
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+#Diagonais 3
+			Transform{
+			rotation 0 1 0 1.02
+			translation 8.4 1.5 2.8
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.02
+			translation -8.4 1.5 2.8
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.02
+			translation -8.4 1.5 -2.8
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.02
+			translation 8.4 1.5 -2.8
+			scale 0.4 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+#Parte Traseira
+			Transform{
+			rotation 0 1 0 1.57
+			translation 9.1 1.5 0
+			scale 0.7 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.57
+			translation -9.1 1.5 0
+			scale 0.7 2 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Anel Mediano
+#Laterais
+		Transform{
+			translation 0 2.2 5.5
+			scale 1.5 0.1 1
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}]}
+		Transform{
+			translation 0 2.2 -5.5
+			scale 1.5 0.1 1
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}]}
+
+#Diagonais 1
+			Transform{
+			rotation 0 1 0 0.32
+			translation 5.2 2.2 5.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.32
+			translation -5.2 2.2 5.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 0.32
+			translation -5.2 2.2 -5.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+						Transform{
+			rotation 0 1 0 -0.32
+			translation 5.2 2.2 -5.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Diagonais 2
+Transform{
+			rotation 0 1 0 0.82
+			translation 7 2.2 4.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation -7 2.2 4.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -0.82
+			translation 7 2.2 -4.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 0.82
+			translation -7 2.2 -4.3
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}	
+
+#Diagonais 3
+Transform{
+			rotation 0 1 0 1.04
+			translation 8.4 2.2 2.5
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.04
+			translation -8.4 2.2 2.5
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.04
+			translation -8.4 2.2 -2.5
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 -1.04
+			translation 8.4 2.2 -2.5
+			scale 0.4 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Traseira
+			Transform{
+			rotation 0 1 0 1.57
+			translation 9 2.2 0
+			scale 0.6 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+			Transform{
+			rotation 0 1 0 1.57
+			translation -9 2.2 0
+			scale 0.6 0.1 1 
+			children[
+				Shape{
+					appearance USE concreto
+					geometry USE bloco_concreto
+				}	
+				]}
+
+#Segunda camada de arquibancadas
+		Transform{
+			translation -3.5 2.8 -6
+			rotation 0 1 0 0.2
+			scale 0.7 0.7 0.7
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
+		Transform{
+			translation 3.5 2.8 -6
+			rotation 0 1 0 -0.2
+			scale 0.7 0.7 0.7
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
