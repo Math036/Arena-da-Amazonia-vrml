@@ -1,0 +1,463 @@
+#VRML V2.0 utf8
+#Base do Estádio
+Transform{
+	children[
+		Shape {
+			appearance Appearance{
+				material Material{
+					diffuseColor 0 0.2 0
+				}
+				texture ImageTexture{
+					url "texturas\grass.png"
+				}	
+			}geometry Box{size 15 0.1 10}
+		}
+	]
+}
+
+#Campo de futebol
+		Transform {
+	translation	0 0.05 0
+	children [
+			Shape {
+			appearance	Appearance {
+					material Material {
+					diffuseColor 0.5 0.5 0.5
+				}	texture ImageTexture {
+			url "texturas/campo.png"
+			}}	
+				geometry Box {
+					size 9 0.1 4.5
+				} }
+		]
+	}
+
+
+	#Duas Traves
+	Transform {
+		rotation 0 1 0 1.57
+		translation	-4.1 0.3 0.2
+		scale 0.05 0.05 0.05
+	children [
+		Inline {
+			url	"Trave.wrl"
+			bboxSize 0.5 2.5 0.5
+		}]}
+
+			Transform {
+		rotation 0 1 0 -1.57
+		translation	4.1 0.3 -0.3
+		scale 0.05 0.05 0.05
+	children [
+		Inline {
+			url	"Trave.wrl"
+			bboxSize 0.5 2.5 0.5
+		}]}
+
+		#Stand de Propaganda
+		Group{
+			children[
+				Transform{
+					translation 1.5 0.1 -2.3
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation -1.5 0.1 -2.3
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation 3.5 0.1 -2.5
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation -3.5 0.1 -2.5
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+			]
+		}
+		#Segunda fileira de Propaganda
+				Group{
+			children[
+				Transform{
+					translation 1.5 0.1 2.3
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation -1.5 0.1 2.3
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation 3.5 0.1 2.5
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+				Transform{
+					translation -3.5 0.1 2.5
+					scale 0.2 0.2 0.2
+					children[
+						Inline{
+							url "propaganda.wrl"
+						}
+					]
+				}
+			]
+		}
+
+		#Arquibancada Lateral
+
+		Transform{
+			translation -3.5 0.4 -3
+			rotation 0 1 0 0.2
+			scale 0.5 0.5 0.5
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
+		Transform{
+			translation 3.5 0.4 -3
+			rotation 0 1 0 -0.2
+			scale 0.5 0.5 0.5
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
+			Transform{
+				translation 1.9 0.4 -3.2
+				rotation 0 1 0 -0.02
+				scale 0.3 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+		Transform{
+				translation -1.9 0.4 -3.2
+				rotation 0 1 0 0.02
+				scale 0.3 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+				Transform{
+				translation 0.8 0.4 -3.1
+				rotation 0 1 0 0.07
+				scale 0.25 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+				Transform{
+				translation -0.8 0.4 -3.1
+				rotation 0 1 0 -0.07
+				scale 0.25 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+
+				#Arquibancada Lateral 2
+						Transform{
+			translation -3.5 0.4 3
+			rotation 0 1 0 2.9
+			scale 0.5 0.5 0.5
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
+		Transform{
+			translation 3.5 0.4 3
+			rotation 0 1 0 -2.9
+			scale 0.5 0.5 0.5
+			children[
+				Inline{
+					url "Arquibancada.wrl"
+				}]}
+			Transform{
+				translation 1.9 0.4 3.2
+				rotation 0 1 0 -3.09
+				scale 0.3 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+		Transform{
+				translation -1.9 0.4 3.2
+				rotation 0 1 0 3.09
+				scale 0.3 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+				Transform{
+				translation 0.8 0.4 3.1
+				rotation 0 1 0 3.07
+				scale 0.25 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+				Transform{
+				translation -0.8 0.4 3.1
+				rotation 0 1 0 -3.07
+				scale 0.25 0.5 0.5
+				children[
+					Inline{
+						url "Arquibancada.wrl"
+				}]}
+
+#Arquibancada de esquina
+
+Transform{
+	translation -5.77 0.1 -3.35
+	rotation 0 1 0 0.58
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+				url "arq_corner.wrl"
+			}]}
+
+Transform{
+	translation 5.79 0.1 3.35
+	rotation 0 1 0 -2.6
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+				url "arq_corner.wrl"
+			}]}
+
+Transform{
+	translation 5.77 0 -3.35
+	rotation 0 1 0 -0.58
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+				url "arq_corner_nohall.wrl"
+			}]}
+
+Transform{
+	translation -5.77 0 3.35
+	rotation 0 1 0 2.58
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+				url "arq_corner_nohall.wrl"
+			}]}
+
+#Arquibancadas de frente
+Transform{
+	translation 6.35 0.4 1
+	rotation 0 1 0 4.1
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+Transform{
+	translation -6.35 0.4 1
+	rotation 0 1 0 -4.1
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+Transform{
+	translation 6.35 0.4 -1
+	rotation 0 1 0  -1.10
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+Transform{
+	translation -6.35 0.4 -1
+	rotation 0 1 0  1.10
+	scale 0.5 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+Transform{
+	translation 6.7 0.4 0
+	rotation 0 1 0  -1.57
+	scale 0.3 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+Transform{
+	translation -6.7 0.4 0
+	rotation 0 1 0  1.57
+	scale 0.3 0.5 0.5
+	children[
+		Inline{
+			url "Arquibancada.wrl"
+		}
+	]
+}
+
+#Corredores de gramado
+Transform{
+	translation 0 0.1 -4.2
+	scale 0.4 0.5 0.5
+	children[
+		Inline{
+			url "corredor_camarote.wrl"
+		}
+	]
+}
+
+Transform{
+	rotation 0 1 0 3.14
+	translation 0 0.1 4.2
+	scale 0.4 0.5 0.5
+	children[
+		Inline{
+			url "corredor_camarote.wrl"
+		}
+	]
+}
+
+#Escadas de acesso lateral
+Transform{
+	translation 0.8 0.25 -2.8
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	translation 2.5 0.25 -2.8
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 3.14
+	translation -0.8 0.25 -2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 3.14
+	translation -2.5 0.25 -2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 3.14
+	translation -0.8 0.25 2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+
+Transform{
+	rotation 0 1 0 3.14
+	translation -2.5 0.25 2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	translation 0.8 0.25 2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	translation 2.5 0.25 2.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+
+#Escadas Frontais
+Transform{
+	rotation 0 1 0 -2.3
+	translation 6.2 0.25 0.75
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 2.1
+	translation -6 0.25 0.9
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 4.2
+	translation -5.8 0.25 -1.3
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
+Transform{
+	rotation 0 1 0 -4.1
+	translation 6.2 0.25 -0.7
+	scale 0.2 0.2 0.2
+	children[
+		Inline{
+			url "escada_acesso.wrl"
+		}]}
